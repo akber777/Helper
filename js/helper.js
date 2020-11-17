@@ -270,7 +270,7 @@ function W(selector) {
 
         width: function () {
 
-            returnclientWidth
+            return clientWidth
 
         },
 
@@ -280,7 +280,7 @@ function W(selector) {
 
         height: function () {
 
-            returnclientHeight
+            return clientHeight
 
         },
 
