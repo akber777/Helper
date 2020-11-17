@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='./css/helper.css' />
+</head>
+
+<body>
+
+    <!--addText() -->
+    <h1>delFromArray()</h1>
+    <p>Arraydan istenilen elementi silmey ucun istifade olunur</p>
+    <h2>consola baxın</h2>
+    <p>----------------------------------</p>
+    <!-- slider() -->
+    <h1>slider()</h1>
+
+    <div class="slider">
+        <div class="item1">
+            <img src="https://cutewallpaper.org/21/transformers-movie-wallpaper/Transformers-The-Last-Knight-2017-Michael-Bays-Epic-Failure.jpg"
+                alt="">
+        </div>
+        <div class="item1">
+            <img src="https://www.superrobotmayhem.com/wp-content/uploads/2014/09/optimus-prime-riding-a-giant-dinosaur_1764.jpg"
+                alt="">
+        </div>
+        <div class="item1">
+            <img src="https://wallpapertag.com/wallpaper/middle/6/7/2/477304-best-transformers-wallpaper-hd-1920x1080-ipad-pro.jpg"
+                alt="">
+        </div>
+    </div>
+    <p>----------------------------------</p>
+
+    <!-- 
+        slider funkisyasi ucun  bize lazim olan html budur sadece olaraq htmle parent divin icine divler elave 
+        ediriy slider ozu bu divleri slider cevirecey her hansi xususi class adi teleb olunmur,
+
+        Ps:slider sade slider olaraq nezerde tutulub diger funksiyalar yazilayib slider pulginleri olduqu ucun lazim bilmedi  
+        
+     -->
+
+    <!-- addHtml() -->
+    <h1>addHtml()</h1>
+
+    <div class="addHtml">
+
+    </div>
+    <p>----------------------------------</p>
+
+    <!--addText() -->
+    <h1>addText()</h1>
+
+    <div class="addText">
+
+    </div>
+    <p>----------------------------------</p>
+
+
+    <!--separate() -->
+    <h1>separate()</h1>
+    <p>forEach methodunun eynisidir</p>
+    <h2>consola baxın</h2>
+    <p>----------------------------------</p>
+
+    <!--findNextAll() -->
+
+    <h1>findNextAll()</h1>
+
+    <h2>teyin edilen Elementden Sonra ne qeder element varsa hamisin tapir</h2>
+
+    <div class="findAll">
+        Bu H1-den sonra gelen butun Elementleri alacaq
+    </div>
+    <h4>Element1</h4>
+    <p>Element2</p>
+    <span>Element3</span>
+
+    <h3>consola baxın</h3>
+
+    <p>----------------------------------</p>
+
+</body>
+
+
+
+<script src="./js/helper.js"></script>
+
+<!-- test -->
+<script>
+
+    // delFromArray([array],[delete item])
+
+    let myarray = [1, 2, 3, 4, 'Helper'] // teyin etdiyimiz array
+
+    HELPER.delFromArray(myarray /* hansi arraydan melumat silinmesini teyin ediriy */, [1, 2, 'Helper'] /* myarray icinden hansi elementlerin silindiyini bildiririy silinen array icinde string deyerde vermey olar */)
+    // HELPER bizim constructorumzdur seperate kimi funksiyani yazdiqa Helper.seperate(array,callback) deye istifade etmeliyiy
+
+    // helperde istifade edilen funksiyalardan biri arraydan istelinen elemento silmey bununcun sadece olaraq silmey istediyiniz elementin adini
+
+    // Array formasinda daxil edin ve  yaratdiqiniz arrayi consol.log da yolxayin 
+
+    console.log("delFromArray:", myarray) // array dan melumat silindiynden sonra yoxlaya bilerik console da yeni array bize verilecey
+
+    // slider 
+
+    W('.slider').slider(1000, autoplay = {
+        autoplay: true, // true olarsa slider automic donecey
+        interval: 5000 // nece saniyeden bir sdonmesini teyin ediriy
+    })
+
+    // addHtml
+
+    W('.addHtml').addHtml(`${'<p> Helper </p>'}` /* ecmascript6 istifade olunub*/)
+
+    // addHtml
+
+    W('.addText').addHtml(`${'<p> Helper from addText()</p>'}`)
+
+    // separate
+
+    let separateArray = ['React', 'Gulp', 'Node', 'Vue', 'Helper']
+
+    HELPER.separate(separateArray, (index, value) => {
+
+        console.log('separate Value:', index)
+
+        console.log(
+            'separate Index:',
+            '---'
+            , value)
+    })
+
+    // findNextAll
+
+
+    let findElem = W('.findAll').findNextAll(function (item, key)/* callback funkisyasi cagira bilersiniz mecburi deyil isteye baglidir*/ {
+
+        //  console.log('AUTHOR:AKBER AKHMEDZADEH')
+    })
+
+    console.log(findElem)
+
+</script>
+
+</html>
