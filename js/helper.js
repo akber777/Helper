@@ -207,8 +207,8 @@ function W(selector) {
 
 
             if (callback) {
-                for (let i = 0; i < allNext.length; i++) {
-                    callback(i, allNext[i])
+                for (let i = 0; i < allPrev.length; i++) {
+                    callback(i, allPrev[i])
                 }
             }
 
@@ -270,7 +270,13 @@ function W(selector) {
 
         width: function () {
 
-            return clientWidth
+            if (obj.length === 1) {
+                return obj[0].clientWidth
+            } else {
+                obj.forEach(item => {
+                    return item.clientWidth
+                })
+            }
 
         },
 
@@ -280,7 +286,13 @@ function W(selector) {
 
         height: function () {
 
-            return clientHeight
+            if (obj.length === 1) {
+                return obj[0].clientHeight
+            } else {
+                obj.forEach(item => {
+                    return item.clientHeight
+                })
+            }
 
         },
 
@@ -704,8 +716,7 @@ function W(selector) {
                 obj = document.querySelector(selector).querySelectorAll(`${findItem}`);
             }
 
-
-            Object.assign(this, obj)
+            Object.assign(this, { obj })
 
             return this
         }

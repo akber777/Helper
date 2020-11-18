@@ -82,6 +82,42 @@
 
     <p>----------------------------------</p>
 
+
+    <!--findPrevAll() -->
+
+    <h1>findPrevAll()</h1>
+
+    <h2>teyin edilen Elementden evvel ne qeder element varsa hamisin tapir</h2>
+
+    <div class="findAll">
+        Bu H1-den evvel gelen butun Elementleri alacaq
+    </div>
+    <h4>Element1</h4>
+    <p>Element2</p>
+    <span>Element3</span>
+
+    <h3>consola baxın</h3>
+
+    <p>----------------------------------</p>
+
+
+    <!-- height() -->
+
+    <h1>height()</h1>
+    <p>Elementin heightin alir</p>
+    <h2>Sliderin heightini alaq</h2>
+    <h3>consola baxın</h3>
+    <p>----------------------------------</p>
+
+
+    <!-- width() -->
+    <h1>width()</h1>
+    <p>Elementin widthin alir</p>
+    <h2>Sliderin widthini alaq</h2>
+    <h3>consola baxın</h3>
+    <p>----------------------------------</p>
+
+
 </body>
 
 
@@ -108,7 +144,7 @@
 
     W('.slider').slider(1000, autoplay = {
         autoplay: true, // true olarsa slider automic donecey
-        interval: 5000 // nece saniyeden bir sdonmesini teyin ediriy
+        interval: 5000 // nece saniyeden bir donmesini teyin ediriy
     })
 
     // addHtml
@@ -121,7 +157,7 @@
 
     // separate
 
-    let separateArray = ['React', 'Gulp', 'Node', 'Vue', 'Helper']
+    let separateArray = ['React', 'Gulp', 'Node', 'Vue', 'Helper'] // separate olancaq array
 
     HELPER.separate(separateArray, (index, value) => {
 
@@ -136,12 +172,35 @@
     // findNextAll
 
 
-    let findElem = W('.findAll').findNextAll(function (item, key)/* callback funkisyasi cagira bilersiniz mecburi deyil isteye baglidir*/ {
+    let findNextElem = W('.findAll').findNextAll(function (item, key)/* callback funkisyasi cagira bilersiniz mecburi deyil isteye baglidir*/ {
 
         //  console.log('AUTHOR:AKBER AKHMEDZADEH')
     })
 
-    console.log(findElem)
+    console.log('findNextAll:-----', findNextElem)
+
+
+    // findPrevAll
+
+
+    let findPrevElem = W('.findAll').findPrevAll(function (item, key)/* callback funkisyasi cagira bilersiniz mecburi deyil isteye baglidir*/ {
+
+        //  console.log('AUTHOR:AKBER AKHMEDZADEH')
+    })
+
+    console.log('findPrevAll:-----', findPrevElem)
+
+    // width()
+
+    let width = W('.slider').width()
+
+    console.log('slider-width:', width)
+
+    // height()
+
+    let height = W('.slider').height()
+
+    console.log('slider-height:', height)
 
 </script>
 
