@@ -14,7 +14,7 @@ function W(selector) {
     }
 
     const self = {
-        // this = obj.length === 1 ?obj[0] : obj;
+    
         // add Html
 
         addHtml: function (html) {
